@@ -1,630 +1,481 @@
 {
-  "_type": "COMPOSITION",
-  "name": {
-      "_type": "DV_TEXT",
-      "value": "NES Vaccination Record"
-  },
-  "uid": {
-      "_type": "OBJECT_VERSION_ID",
-      "value": "b96a9288-857c-49b9-ac7d-c9a7cab2b125::63d395f9-8483-45e4-baba-575c49ddd200::1"
-  },
-  "archetype_details": {
-      "_type": "ARCHETYPED",
-      "archetype_id": {
-          "_type": "ARCHETYPE_ID",
-          "value": "openEHR-EHR-COMPOSITION.vaccination_record.v0"
-      },
-      "template_id": {
-          "_type": "TEMPLATE_ID",
-          "value": "NES Vaccination Record"
-      },
-      "rm_version": "1.0.4"
-  },
-  "archetype_node_id": "openEHR-EHR-COMPOSITION.vaccination_record.v0",
-  "language": {
-      "_type": "CODE_PHRASE",
-      "terminology_id": {
-          "_type": "TERMINOLOGY_ID",
-          "value": "ISO_639-1"
-      },
-      "code_string": "en"
-  },
-  "territory": {
-      "_type": "CODE_PHRASE",
-      "terminology_id": {
-          "_type": "TERMINOLOGY_ID",
-          "value": "ISO_3166-1"
-      },
-      "code_string": "US"
-  },
-  "category": {
-      "_type": "DV_CODED_TEXT",
-      "value": "event",
-      "defining_code": {
-          "_type": "CODE_PHRASE",
-          "terminology_id": {
-              "_type": "TERMINOLOGY_ID",
-              "value": "openehr"
-          },
-          "code_string": "433"
-      }
-  },
-  "composer": {
-      "_type": "PARTY_IDENTIFIED",
-      "name": "Silvia Blake"
-  },
-  "context": {
-      "_type": "EVENT_CONTEXT",
-      "start_time": {
-          "_type": "DV_DATE_TIME",
-          "value": "2021-11-18T11:09:02.711Z"
-      },
-      "setting": {
-          "_type": "DV_CODED_TEXT",
-          "value": "other care",
-          "defining_code": {
-              "_type": "CODE_PHRASE",
-              "terminology_id": {
-                  "_type": "TERMINOLOGY_ID",
-                  "value": "openehr"
-              },
-              "code_string": "238"
-          }
-      },
-      "other_context": {
-          "_type": "ITEM_TREE",
-          "name": {
-              "_type": "DV_TEXT",
-              "value": "Item tree"
-          },
-          "archetype_node_id": "at0003",
-          "items": [
-              {
-                  "_type": "CLUSTER",
-                  "name": {
-                      "_type": "DV_TEXT",
-                      "value": "XDS Metadata"
-                  },
-                  "archetype_details": {
-                      "_type": "ARCHETYPED",
-                      "archetype_id": {
-                          "_type": "ARCHETYPE_ID",
-                          "value": "openEHR-EHR-CLUSTER.xds_metadata.v0"
-                      },
-                      "rm_version": "1.0.4"
-                  },
-                  "archetype_node_id": "openEHR-EHR-CLUSTER.xds_metadata.v0",
-                  "items": [
-                      {
-                          "_type": "ELEMENT",
-                          "name": {
-                              "_type": "DV_TEXT",
-                              "value": "Document type"
-                          },
-                          "archetype_node_id": "at0003",
-                          "value": {
-                              "_type": "DV_CODED_TEXT",
-                              "value": "Immunization record (record artifact)",
-                              "defining_code": {
-                                  "_type": "CODE_PHRASE",
-                                  "terminology_id": {
-                                      "_type": "TERMINOLOGY_ID",
-                                      "value": "local_terms"
-                                  },
-                                  "code_string": "41000179103"
-                              }
-                          }
-                      }
-                  ]
-              }
-          ]
-      },
-      "health_care_facility": {
-          "_type": "PARTY_IDENTIFIED",
-          "external_ref": {
-              "_type": "PARTY_REF",
-              "id": {
-                  "_type": "GENERIC_ID",
-                  "value": "9091",
-                  "scheme": "HOSPITAL-NS"
-              },
-              "namespace": "HOSPITAL-NS",
-              "type": "PARTY"
-          },
-          "name": "Hospital"
-      },
-      "participations": [
-          {
-              "_type": "PARTICIPATION",
-              "function": {
-                  "_type": "DV_TEXT",
-                  "value": "requester"
-              },
-              "performer": {
-                  "_type": "PARTY_IDENTIFIED",
-                  "external_ref": {
-                      "_type": "PARTY_REF",
-                      "id": {
-                          "_type": "GENERIC_ID",
-                          "value": "199",
-                          "scheme": "HOSPITAL-NS"
-                      },
-                      "namespace": "HOSPITAL-NS",
-                      "type": "ANY"
-                  },
-                  "name": "Dr. Marcus Johnson"
-              },
-              "mode": {
-                  "_type": "DV_CODED_TEXT",
-                  "value": "face-to-face communication",
-                  "defining_code": {
-                      "_type": "CODE_PHRASE",
-                      "terminology_id": {
-                          "_type": "TERMINOLOGY_ID",
-                          "value": "openehr"
-                      },
-                      "code_string": "216"
-                  }
-              }
-          },
-          {
-              "_type": "PARTICIPATION",
-              "function": {
-                  "_type": "DV_TEXT",
-                  "value": "performer"
-              },
-              "performer": {
-                  "_type": "PARTY_IDENTIFIED",
-                  "external_ref": {
-                      "_type": "PARTY_REF",
-                      "id": {
-                          "_type": "GENERIC_ID",
-                          "value": "198",
-                          "scheme": "HOSPITAL-NS"
-                      },
-                      "namespace": "HOSPITAL-NS",
-                      "type": "ANY"
-                  },
-                  "name": "Lara Markham"
-              },
-              "mode": {
-                  "_type": "DV_CODED_TEXT",
-                  "value": "not specified",
-                  "defining_code": {
-                      "_type": "CODE_PHRASE",
-                      "terminology_id": {
-                          "_type": "TERMINOLOGY_ID",
-                          "value": "openehr"
-                      },
-                      "code_string": "193"
-                  }
-              }
-          }
-      ]
-  },
-  "content": [
-      {
-          "_type": "ACTION",
-          "name": {
-              "_type": "DV_TEXT",
-              "value": "Vaccination management"
-          },
-          "archetype_details": {
-              "_type": "ARCHETYPED",
-              "archetype_id": {
-                  "_type": "ARCHETYPE_ID",
-                  "value": "openEHR-EHR-ACTION.medication.v1"
-              },
-              "rm_version": "1.0.4"
-          },
-          "archetype_node_id": "openEHR-EHR-ACTION.medication.v1",
-          "language": {
-              "_type": "CODE_PHRASE",
-              "terminology_id": {
-                  "_type": "TERMINOLOGY_ID",
-                  "value": "ISO_639-1"
-              },
-              "code_string": "en"
-          },
-          "encoding": {
-              "_type": "CODE_PHRASE",
-              "terminology_id": {
-                  "_type": "TERMINOLOGY_ID",
-                  "value": "IANA_character-sets"
-              },
-              "code_string": "UTF-8"
-          },
-          "subject": {
-              "_type": "PARTY_SELF"
-          },
-          "other_participations": [
-              {
-                  "_type": "PARTICIPATION",
-                  "function": {
-                      "_type": "DV_TEXT",
-                      "value": "requester"
-                  },
-                  "performer": {
-                      "_type": "PARTY_IDENTIFIED",
-                      "external_ref": {
-                          "_type": "PARTY_REF",
-                          "id": {
-                              "_type": "GENERIC_ID",
-                              "value": "199",
-                              "scheme": "HOSPITAL-NS"
-                          },
-                          "namespace": "HOSPITAL-NS",
-                          "type": "ANY"
-                      },
-                      "name": "Dr. Marcus Johnson"
-                  },
-                  "mode": {
-                      "_type": "DV_CODED_TEXT",
-                      "value": "face-to-face communication",
-                      "defining_code": {
-                          "_type": "CODE_PHRASE",
-                          "terminology_id": {
-                              "_type": "TERMINOLOGY_ID",
-                              "value": "openehr"
-                          },
-                          "code_string": "216"
-                      }
-                  }
-              },
-              {
-                  "_type": "PARTICIPATION",
-                  "function": {
-                      "_type": "DV_TEXT",
-                      "value": "performer"
-                  },
-                  "performer": {
-                      "_type": "PARTY_IDENTIFIED",
-                      "external_ref": {
-                          "_type": "PARTY_REF",
-                          "id": {
-                              "_type": "GENERIC_ID",
-                              "value": "198",
-                              "scheme": "HOSPITAL-NS"
-                          },
-                          "namespace": "HOSPITAL-NS",
-                          "type": "ANY"
-                      },
-                      "name": "Lara Markham"
-                  },
-                  "mode": {
-                      "_type": "DV_CODED_TEXT",
-                      "value": "not specified",
-                      "defining_code": {
-                          "_type": "CODE_PHRASE",
-                          "terminology_id": {
-                              "_type": "TERMINOLOGY_ID",
-                              "value": "openehr"
-                          },
-                          "code_string": "193"
-                      }
-                  }
-              }
-          ],
-          "protocol": {
-              "_type": "ITEM_TREE",
-              "name": {
-                  "_type": "DV_TEXT",
-                  "value": "Tree"
-              },
-              "archetype_node_id": "at0030",
-              "items": [
-                  {
-                      "_type": "ELEMENT",
-                      "name": {
-                          "_type": "DV_TEXT",
-                          "value": "Appointment ID"
-                      },
-                      "archetype_node_id": "at0103",
-                      "value": {
-                          "_type": "DV_IDENTIFIER",
-                          "issuer": "Issuer",
-                          "assigner": "Assigner",
-                          "id": "14ebf56b-8d76-439b-8bfe-884e1e8fa569",
-                          "type": "Prescription"
-                      }
-                  },
-                  {
-                      "_type": "CLUSTER",
-                      "name": {
-                          "_type": "DV_TEXT",
-                          "value": "nes_vaccination_protocol"
-                      },
-                      "archetype_details": {
-                          "_type": "ARCHETYPED",
-                          "archetype_id": {
-                              "_type": "ARCHETYPE_ID",
-                              "value": "openEHR-EHR-CLUSTER.nes_vaccination_protocol.v0"
-                          },
-                          "rm_version": "1.0.4"
-                      },
-                      "archetype_node_id": "openEHR-EHR-CLUSTER.nes_vaccination_protocol.v0",
-                      "items": [
-                          {
-                              "_type": "ELEMENT",
-                              "name": {
-                                  "_type": "DV_TEXT",
-                                  "value": "Target disease"
-                              },
-                              "archetype_node_id": "at0001",
-                              "value": {
-                                  "_type": "DV_TEXT",
-                                  "value": "Target disease 40"
-                              }
-                          },
-                          {
-                              "_type": "ELEMENT",
-                              "name": {
-                                  "_type": "DV_TEXT",
-                                  "value": "Country of vaccination"
-                              },
-                              "archetype_node_id": "at0011",
-                              "value": {
-                                  "_type": "DV_CODED_TEXT",
-                                  "value": "D.16 description",
-                                  "defining_code": {
-                                      "_type": "CODE_PHRASE",
-                                      "terminology_id": {
-                                          "_type": "TERMINOLOGY_ID",
-                                          "value": "external_terminology"
-                                      },
-                                      "code_string": "D.16"
-                                  }
-                              }
-                          },
-                          {
-                              "_type": "ELEMENT",
-                              "name": {
-                                  "_type": "DV_TEXT",
-                                  "value": "Vaccination centre"
-                              },
-                              "archetype_node_id": "at0009",
-                              "value": {
-                                  "_type": "DV_TEXT",
-                                  "value": "Vaccination centre 54"
-                              }
-                          }
-                      ]
-                  }
-              ]
-          },
-          "time": {
-              "_type": "DV_DATE_TIME",
-              "value": "2021-11-18T11:07:17.096Z"
-          },
-          "description": {
-              "_type": "ITEM_TREE",
-              "name": {
-                  "_type": "DV_TEXT",
-                  "value": "Tree"
-              },
-              "archetype_node_id": "at0017",
-              "items": [
-                  {
-                      "_type": "ELEMENT",
-                      "name": {
-                          "_type": "DV_TEXT",
-                          "value": "Vaccine name"
-                      },
-                      "archetype_node_id": "at0020",
-                      "value": {
-                          "_type": "DV_TEXT",
-                          "value": "Vaccine name 13"
-                      }
-                  },
-                  {
-                      "_type": "CLUSTER",
-                      "name": {
-                          "_type": "DV_TEXT",
-                          "value": "Medication"
-                      },
-                      "archetype_details": {
-                          "_type": "ARCHETYPED",
-                          "archetype_id": {
-                              "_type": "ARCHETYPE_ID",
-                              "value": "openEHR-EHR-CLUSTER.medication.v1"
-                          },
-                          "rm_version": "1.0.4"
-                      },
-                      "archetype_node_id": "openEHR-EHR-CLUSTER.medication.v1",
-                      "items": [
-                          {
-                              "_type": "ELEMENT",
-                              "name": {
-                                  "_type": "DV_TEXT",
-                                  "value": "Manufacturer"
-                              },
-                              "archetype_node_id": "at0151",
-                              "value": {
-                                  "_type": "DV_TEXT",
-                                  "value": "Manufacturer 78"
-                              }
-                          },
-                          {
-                              "_type": "ELEMENT",
-                              "name": {
-                                  "_type": "DV_TEXT",
-                                  "value": "Batch ID"
-                              },
-                              "archetype_node_id": "at0150",
-                              "value": {
-                                  "_type": "DV_TEXT",
-                                  "value": "Batch ID 18"
-                              }
-                          },
-                          {
-                              "_type": "ELEMENT",
-                              "name": {
-                                  "_type": "DV_TEXT",
-                                  "value": "Expiry"
-                              },
-                              "archetype_node_id": "at0003",
-                              "value": {
-                                  "_type": "DV_DATE_TIME",
-                                  "value": "2021-11-18T11:07:17.095Z"
-                              }
-                          }
-                      ]
-                  },
-                  {
-                      "_type": "CLUSTER",
-                      "name": {
-                          "_type": "DV_TEXT",
-                          "value": "Medication supply amount"
-                      },
-                      "archetype_details": {
-                          "_type": "ARCHETYPED",
-                          "archetype_id": {
-                              "_type": "ARCHETYPE_ID",
-                              "value": "openEHR-EHR-CLUSTER.medication_supply_amount.v0"
-                          },
-                          "rm_version": "1.0.4"
-                      },
-                      "archetype_node_id": "openEHR-EHR-CLUSTER.medication_supply_amount.v0",
-                      "items": [
-                          {
-                              "_type": "ELEMENT",
-                              "name": {
-                                  "_type": "DV_TEXT",
-                                  "value": "Amount description"
-                              },
-                              "archetype_node_id": "at0161",
-                              "value": {
-                                  "_type": "DV_TEXT",
-                                  "value": "Amount description 43"
-                              }
-                          }
-                      ]
-                  },
-                  {
-                      "_type": "ELEMENT",
-                      "name": {
-                          "_type": "DV_TEXT",
-                          "value": "Reason"
-                      },
-                      "archetype_node_id": "at0021",
-                      "value": {
-                          "_type": "DV_TEXT",
-                          "value": "Reason 47"
-                      }
-                  },
-                  {
-                      "_type": "CLUSTER",
-                      "name": {
-                          "_type": "DV_TEXT",
-                          "value": "Administration details"
-                      },
-                      "archetype_node_id": "at0140",
-                      "items": [
-                          {
-                              "_type": "ELEMENT",
-                              "name": {
-                                  "_type": "DV_TEXT",
-                                  "value": "Route"
-                              },
-                              "archetype_node_id": "at0147",
-                              "value": {
-                                  "_type": "DV_TEXT",
-                                  "value": "Route 56"
-                              }
-                          },
-                          {
-                              "_type": "ELEMENT",
-                              "name": {
-                                  "_type": "DV_TEXT",
-                                  "value": "Body site"
-                              },
-                              "archetype_node_id": "at0141",
-                              "value": {
-                                  "_type": "DV_TEXT",
-                                  "value": "Body site 69"
-                              }
-                          }
-                      ]
-                  },
-                  {
-                      "_type": "CLUSTER",
-                      "name": {
-                          "_type": "DV_TEXT",
-                          "value": "NES Vaccination event details"
-                      },
-                      "archetype_details": {
-                          "_type": "ARCHETYPED",
-                          "archetype_id": {
-                              "_type": "ARCHETYPE_ID",
-                              "value": "openEHR-EHR-CLUSTER.nes_vaccination_event_details.v0"
-                          },
-                          "rm_version": "1.0.4"
-                      },
-                      "archetype_node_id": "openEHR-EHR-CLUSTER.nes_vaccination_event_details.v0",
-                      "items": [
-                          {
-                              "_type": "ELEMENT",
-                              "name": {
-                                  "_type": "DV_TEXT",
-                                  "value": "Vaccination administration purpose"
-                              },
-                              "archetype_node_id": "at0007",
-                              "value": {
-                                  "_type": "DV_CODED_TEXT",
-                                  "value": "Booster dose",
-                                  "defining_code": {
-                                      "_type": "CODE_PHRASE",
-                                      "terminology_id": {
-                                          "_type": "TERMINOLOGY_ID",
-                                          "value": "local"
-                                      },
-                                      "code_string": "at0009"
-                                  }
-                              }
-                          }
-                      ]
-                  },
-                  {
-                      "_type": "ELEMENT",
-                      "name": {
-                          "_type": "DV_TEXT",
-                          "value": "Dose number"
-                      },
-                      "archetype_node_id": "at0025",
-                      "value": {
-                          "_type": "DV_COUNT",
-                          "magnitude": 9
-                      }
-                  },
-                  {
-                      "_type": "ELEMENT",
-                      "name": {
-                          "_type": "DV_TEXT",
-                          "value": "Note"
-                      },
-                      "archetype_node_id": "at0024",
-                      "value": {
-                          "_type": "DV_TEXT",
-                          "value": "Note 3"
-                      }
-                  }
-              ]
-          },
-          "ism_transition": {
-              "_type": "ISM_TRANSITION",
-              "current_state": {
-                  "_type": "DV_CODED_TEXT",
-                  "value": "active",
-                  "defining_code": {
-                      "_type": "CODE_PHRASE",
-                      "terminology_id": {
-                          "_type": "TERMINOLOGY_ID",
-                          "value": "openehr"
-                      },
-                      "code_string": "245"
-                  }
-              }
-          }
-      }
-  ]
+    "_type": "COMPOSITION",
+    "name": {
+        "_type": "DV_TEXT",
+        "value": "NES Vaccination Record"
+    },
+    "archetype_details": {
+        "archetype_id": {
+            "value": "openEHR-EHR-COMPOSITION.vaccination_record.v0"
+        },
+        "template_id": {
+            "value": "NES Vaccination Record"
+        },
+        "rm_version": "1.0.4"
+    },
+    "language": {
+        "_type": "CODE_PHRASE",
+        "terminology_id": {
+            "_type": "TERMINOLOGY_ID",
+            "value": "ISO_639-1"
+        },
+        "code_string": "en"
+    },
+    "territory": {
+        "_type": "CODE_PHRASE",
+        "terminology_id": {
+            "_type": "TERMINOLOGY_ID",
+            "value": "ISO_3166-1"
+        },
+        "code_string": "GB"
+    },
+    "category": {
+        "_type": "DV_CODED_TEXT",
+        "value": "event",
+        "defining_code": {
+            "_type": "CODE_PHRASE",
+            "terminology_id": {
+                "_type": "TERMINOLOGY_ID",
+                "value": "openehr"
+            },
+            "code_string": "433"
+        }
+    },
+    "composer": {
+        "_type": "PARTY_IDENTIFIED",
+        "external_ref": {
+            "_type": "PARTY_REF",
+            "namespace": "NHSScotland",
+            "type": "PARTY",
+            "id": {
+                "_type": "GENERIC_ID",
+                "value": "silvia.blank@nhs.scot",
+                "scheme": "NHSScotland"
+            }
+        },
+        "name": "Silvia Blake"
+    },
+    "context": {
+        "_type": "EVENT_CONTEXT",
+        "start_time": {
+            "_type": "DV_DATE_TIME",
+            "value": "2022-01-21T15:00:44.30746Z"
+        },
+        "setting": {
+            "_type": "DV_CODED_TEXT",
+            "value": "other care",
+            "defining_code": {
+                "_type": "CODE_PHRASE",
+                "terminology_id": {
+                    "_type": "TERMINOLOGY_ID",
+                    "value": "openehr"
+                },
+                "code_string": "238"
+            }
+        },
+        "other_context": {
+            "_type": "ITEM_TREE",
+            "name": {
+                "_type": "DV_TEXT",
+                "value": "Item tree"
+            },
+            "items": [
+                {
+                    "_type": "CLUSTER",
+                    "name": {
+                        "_type": "DV_TEXT",
+                        "value": "XDS Metadata"
+                    },
+                    "items": [
+                        {
+                            "_type": "ELEMENT",
+                            "name": {
+                                "_type": "DV_TEXT",
+                                "value": "Document type"
+                            },
+                            "value": {
+                                "_type": "DV_CODED_TEXT",
+                                "value": "Immunization record (record artifact)",
+                                "defining_code": {
+                                    "_type": "CODE_PHRASE",
+                                    "terminology_id": {
+                                        "_type": "TERMINOLOGY_ID",
+                                        "value": "local_terms"
+                                    },
+                                    "code_string": "41000179103"
+                                }
+                            },
+                            "archetype_node_id": "at0003"
+                        }
+                    ],
+                    "archetype_node_id": "openEHR-EHR-CLUSTER.xds_metadata.v0"
+                }
+            ],
+            "archetype_node_id": "at0003"
+        },
+        "health_care_facility": {
+            "_type": "PARTY_IDENTIFIED",
+            "external_ref": {
+                "_type": "PARTY_REF",
+                "namespace": "NHSScotland",
+                "type": "PARTY",
+                "id": {
+                    "_type": "GENERIC_ID",
+                    "value": "S226H",
+                    "scheme": "NHSScotland"
+                }
+            },
+            "name": "Royal Infirmary, Edinburgh"
+        }
+    },
+    "content": [
+        {
+            "_type": "ACTION",
+            "name": {
+                "_type": "DV_TEXT",
+                "value": "Vaccination management"
+            },
+            "archetype_details": {
+                "archetype_id": {
+                    "value": "openEHR-EHR-ACTION.medication.v1"
+                },
+                "template_id": {
+                    "value": "NES Vaccination Record"
+                },
+                "rm_version": "1.0.4"
+            },
+            "language": {
+                "_type": "CODE_PHRASE",
+                "terminology_id": {
+                    "_type": "TERMINOLOGY_ID",
+                    "value": "ISO_639-1"
+                },
+                "code_string": "en"
+            },
+            "encoding": {
+                "_type": "CODE_PHRASE",
+                "terminology_id": {
+                    "_type": "TERMINOLOGY_ID",
+                    "value": "IANA_character-sets"
+                },
+                "code_string": "UTF-8"
+            },
+            "subject": {
+                "_type": "PARTY_SELF"
+            },
+            "other_participations": [
+                {
+                    "_type": "PARTICIPATION",
+                    "function": {
+                        "_type": "DV_TEXT",
+                        "value": "performer"
+                    },
+                    "performer": {
+                        "_type": "PARTY_IDENTIFIED",
+                        "external_ref": {
+                            "_type": "PARTY_REF",
+                            "type": "PARTY",
+                            "namespace": "chi-number",
+                            "id": {
+                                "_type": "GENERIC_ID",
+                                "value": "123456",
+                                "scheme": "http://fhir.nhs.scot.uk/Id/national/chi-number"
+                            }
+                        },
+                        "name": "Dr. Lara Markham"
+                    }
+                }
+            ],
+            "protocol": {
+                "_type": "ITEM_TREE",
+                "name": {
+                    "_type": "DV_TEXT",
+                    "value": "Tree"
+                },
+                "items": [
+                    {
+                        "_type": "ELEMENT",
+                        "name": {
+                            "_type": "DV_TEXT",
+                            "value": "Appointment ID"
+                        },
+                        "value": {
+                            "_type": "DV_IDENTIFIER",
+                            "issuer": "Issuer",
+                            "assigner": "Assigner",
+                            "id": "14ebf56b-8d76-439b-8bfe-884e1e8fa569",
+                            "type": "Prescription"
+                        },
+                        "archetype_node_id": "at0103"
+                    },
+                    {
+                        "_type": "CLUSTER",
+                        "name": {
+                            "_type": "DV_TEXT",
+                            "value": "nes_vaccination_protocol"
+                        },
+                        "items": [
+                            {
+                                "_type": "ELEMENT",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Target disease"
+                                },
+                                "value": {
+                                    "_type": "DV_TEXT",
+                                    "value": "840539006"
+                                },
+                                "archetype_node_id": "at0001"
+                            },
+                            {
+                                "_type": "ELEMENT",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Vaccination centre"
+                                },
+                                "value": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Some clinic"
+                                },
+                                "archetype_node_id": "at0009"
+                            },
+                            {
+                                "_type": "ELEMENT",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Country of vaccination"
+                                },
+                                "value": {
+                                    "_type": "DV_CODED_TEXT",
+                                    "value": "Scotland",
+                                    "defining_code": {
+                                        "_type": "CODE_PHRASE",
+                                        "terminology_id": {
+                                            "_type": "TERMINOLOGY_ID",
+                                            "value": "ISO_3166-2:GB"
+                                        },
+                                        "code_string": "GB-SCT"
+                                    }
+                                },
+                                "archetype_node_id": "at0011"
+                            }
+                        ],
+                        "archetype_node_id": "openEHR-EHR-CLUSTER.nes_vaccination_protocol.v0"
+                    }
+                ],
+                "archetype_node_id": "at0030"
+            },
+            "time": {
+                "_type": "DV_DATE_TIME",
+                "value": "2022-01-21T14:28:00.096Z"
+            },
+            "description": {
+                "_type": "ITEM_TREE",
+                "name": {
+                    "_type": "DV_TEXT",
+                    "value": "Tree"
+                },
+                "items": [
+                    {
+                        "_type": "ELEMENT",
+                        "name": {
+                            "_type": "DV_TEXT",
+                            "value": "Vaccine name"
+                        },
+                        "value": {
+                            "_type": "DV_TEXT",
+                            "value": "COVID-19 Vaccine AstraZeneca (ChAdOx1 S [recombinant]) 5x10,000,000,000 viral particles/0.5ml dose solution for injection multidose vials (AstraZeneca UK Ltd)"
+                        },
+                        "archetype_node_id": "at0020"
+                    },
+                    {
+                        "_type": "ELEMENT",
+                        "name": {
+                            "_type": "DV_TEXT",
+                            "value": "Reason"
+                        },
+                        "value": {
+                            "_type": "DV_TEXT",
+                            "value": "Vaccine dose administered"
+                        },
+                        "archetype_node_id": "at0021"
+                    },
+                    {
+                        "_type": "ELEMENT",
+                        "name": {
+                            "_type": "DV_TEXT",
+                            "value": "Note"
+                        },
+                        "value": {
+                            "_type": "DV_TEXT",
+                            "value": ""
+                        },
+                        "archetype_node_id": "at0024"
+                    },
+                    {
+                        "_type": "ELEMENT",
+                        "name": {
+                            "_type": "DV_TEXT",
+                            "value": "Dose number"
+                        },
+                        "value": {
+                            "_type": "DV_COUNT",
+                            "magnitude": 1
+                        },
+                        "archetype_node_id": "at0025"
+                    },
+                    {
+                        "_type": "CLUSTER",
+                        "name": {
+                            "_type": "DV_TEXT",
+                            "value": "Administration details"
+                        },
+                        "items": [
+                            {
+                                "_type": "ELEMENT",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Body site"
+                                },
+                                "value": {
+                                    "_type": "DV_TEXT",
+                                    "value": "LUA"
+                                },
+                                "archetype_node_id": "at0141"
+                            },
+                            {
+                                "_type": "ELEMENT",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Route"
+                                },
+                                "value": {
+                                    "_type": "DV_TEXT",
+                                    "value": "IM"
+                                },
+                                "archetype_node_id": "at0147"
+                            }
+                        ],
+                        "archetype_node_id": "at0140"
+                    },
+                    {
+                        "_type": "CLUSTER",
+                        "name": {
+                            "_type": "DV_TEXT",
+                            "value": "Medication"
+                        },
+                        "items": [
+                            {
+                                "_type": "ELEMENT",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Expiry"
+                                },
+                                "value": {
+                                    "_type": "DV_DATE_TIME",
+                                    "value": "2021-11-18T11:07:17.095Z"
+                                },
+                                "archetype_node_id": "at0003"
+                            },
+                            {
+                                "_type": "ELEMENT",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Batch ID"
+                                },
+                                "value": {
+                                    "_type": "DV_TEXT",
+                                    "value": "X123456"
+                                },
+                                "archetype_node_id": "at0150"
+                            },
+                            {
+                                "_type": "ELEMENT",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Manufacturer"
+                                },
+                                "value": {
+                                    "_type": "DV_TEXT",
+                                    "value": "AstraZeneca"
+                                },
+                                "archetype_node_id": "at0151"
+                            }
+                        ],
+                        "archetype_node_id": "openEHR-EHR-CLUSTER.medication.v1"
+                    },
+                    {
+                        "_type": "CLUSTER",
+                        "name": {
+                            "_type": "DV_TEXT",
+                            "value": "Medication supply amount"
+                        },
+                        "items": [
+                            {
+                                "_type": "ELEMENT",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Amount description"
+                                },
+                                "value": {
+                                    "_type": "DV_TEXT",
+                                    "value": "30ml"
+                                },
+                                "archetype_node_id": "at0161"
+                            }
+                        ],
+                        "archetype_node_id": "openEHR-EHR-CLUSTER.medication_supply_amount.v0"
+                    },
+                    {
+                        "_type": "CLUSTER",
+                        "name": {
+                            "_type": "DV_TEXT",
+                            "value": "NES Vaccination event details"
+                        },
+                        "items": [
+                            {
+                                "_type": "ELEMENT",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Vaccination administration purpose"
+                                },
+                                "value": {
+                                    "_type": "DV_CODED_TEXT",
+                                    "value": "Booster dose",
+                                    "defining_code": {
+                                        "_type": "CODE_PHRASE",
+                                        "terminology_id": {
+                                            "_type": "TERMINOLOGY_ID",
+                                            "value": "local"
+                                        },
+                                        "code_string": "at0009"
+                                    }
+                                },
+                                "archetype_node_id": "at0007"
+                            }
+                        ],
+                        "archetype_node_id": "openEHR-EHR-CLUSTER.nes_vaccination_event_details.v0"
+                    }
+                ],
+                "archetype_node_id": "at0017"
+            },
+            "ism_transition": {
+                "_type": "ISM_TRANSITION",
+                "current_state": {
+                    "_type": "DV_CODED_TEXT",
+                    "value": "active",
+                    "defining_code": {
+                        "_type": "CODE_PHRASE",
+                        "terminology_id": {
+                            "_type": "TERMINOLOGY_ID",
+                            "value": "openehr"
+                        },
+                        "code_string": "245"
+                    }
+                }
+            },
+            "archetype_node_id": "openEHR-EHR-ACTION.medication.v1"
+        }
+    ],
+    "archetype_node_id": "openEHR-EHR-COMPOSITION.vaccination_record.v0"
 }
