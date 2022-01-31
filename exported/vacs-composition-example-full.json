@@ -59,7 +59,7 @@
         "_type": "EVENT_CONTEXT",
         "start_time": {
             "_type": "DV_DATE_TIME",
-            "value": "2022-01-21T15:00:44.30746Z"
+            "value": "2022-01-31T14:01:52.883585Z"
         },
         "setting": {
             "_type": "DV_CODED_TEXT",
@@ -174,7 +174,6 @@
                         "_type": "PARTY_IDENTIFIED",
                         "external_ref": {
                             "_type": "PARTY_REF",
-                            "type": "PARTY",
                             "namespace": "chi-number",
                             "id": {
                                 "_type": "GENERIC_ID",
@@ -296,7 +295,7 @@
                         },
                         "value": {
                             "_type": "DV_TEXT",
-                            "value": "Vaccine dose administered"
+                            "value": "429060002"
                         },
                         "archetype_node_id": "at0021"
                     },
@@ -471,6 +470,18 @@
                             "value": "openehr"
                         },
                         "code_string": "245"
+                    }
+                },
+                "careflow_step": {
+                    "_type": "DV_CODED_TEXT",
+                    "value": "Vaccine dose administered",
+                    "defining_code": {
+                        "_type": "CODE_PHRASE",
+                        "terminology_id": {
+                            "_type": "TERMINOLOGY_ID",
+                            "value": "local"
+                        },
+                        "code_string": "at0006"
                     }
                 }
             },
