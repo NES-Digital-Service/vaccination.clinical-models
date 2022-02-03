@@ -49,7 +49,7 @@
             "type": "PARTY",
             "id": {
                 "_type": "GENERIC_ID",
-                "value": "silvia.blank@nhs.scot",
+                "value": "silvia.blake@nhs.scot",
                 "scheme": "NHSScotland"
             }
         },
@@ -59,7 +59,7 @@
         "_type": "EVENT_CONTEXT",
         "start_time": {
             "_type": "DV_DATE_TIME",
-            "value": "2022-01-31T14:01:52.883585Z"
+            "value": "2022-02-03T14:03:43.728854Z"
         },
         "setting": {
             "_type": "DV_CODED_TEXT",
@@ -179,7 +179,8 @@
                                 "_type": "GENERIC_ID",
                                 "value": "123456",
                                 "scheme": "http://fhir.nhs.scot.uk/Id/national/chi-number"
-                            }
+                            },
+                            "type": "PERSON"
                         },
                         "name": "Dr. Lara Markham"
                     }
@@ -221,8 +222,16 @@
                                     "value": "Target disease"
                                 },
                                 "value": {
-                                    "_type": "DV_TEXT",
-                                    "value": "840539006"
+                                    "_type": "DV_CODED_TEXT",
+                                    "value": "COVID19",
+                                    "defining_code": {
+                                        "_type": "CODE_PHRASE",
+                                        "terminology_id": {
+                                            "_type": "TERMINOLOGY_ID",
+                                            "value": "SNOMED-CT"
+                                        },
+                                        "code_string": "840539006"
+                                    }
                                 },
                                 "archetype_node_id": "at0001"
                             },
@@ -282,8 +291,16 @@
                             "value": "Vaccine name"
                         },
                         "value": {
-                            "_type": "DV_TEXT",
-                            "value": "COVID-19 Vaccine AstraZeneca (ChAdOx1 S [recombinant]) 5x10,000,000,000 viral particles/0.5ml dose solution for injection multidose vials (AstraZeneca UK Ltd)"
+                            "_type": "DV_CODED_TEXT",
+                            "value": "COVID-19 Vaccine AstraZeneca (ChAdOx1 S [recombinant]) 5x10,000,000,000 viral particles/0.5ml dose solution for injection multidose vials (AstraZeneca UK Ltd)",
+                            "defining_code": {
+                                "_type": "CODE_PHRASE",
+                                "terminology_id": {
+                                    "_type": "TERMINOLOGY_ID",
+                                    "value": "SNOMED-CT"
+                                },
+                                "code_string": "39114911000001105"
+                            }
                         },
                         "archetype_node_id": "at0020"
                     },
@@ -337,8 +354,16 @@
                                     "value": "Body site"
                                 },
                                 "value": {
-                                    "_type": "DV_TEXT",
-                                    "value": "LUA"
+                                    "_type": "DV_CODED_TEXT",
+                                    "value": "Left Upper Arm",
+                                    "defining_code": {
+                                        "_type": "CODE_PHRASE",
+                                        "terminology_id": {
+                                            "_type": "TERMINOLOGY_ID",
+                                            "value": "http://hl7.org/fhir/ValueSet/immunization-site"
+                                        },
+                                        "code_string": "LUA"
+                                    }
                                 },
                                 "archetype_node_id": "at0141"
                             },
@@ -349,8 +374,16 @@
                                     "value": "Route"
                                 },
                                 "value": {
-                                    "_type": "DV_TEXT",
-                                    "value": "IM"
+                                    "_type": "DV_CODED_TEXT",
+                                    "value": "Injection, intramuscular",
+                                    "defining_code": {
+                                        "_type": "CODE_PHRASE",
+                                        "terminology_id": {
+                                            "_type": "TERMINOLOGY_ID",
+                                            "value": "http://hl7.org/fhir/ValueSet/immunization-route"
+                                        },
+                                        "code_string": "IM"
+                                    }
                                 },
                                 "archetype_node_id": "at0147"
                             }
@@ -361,21 +394,9 @@
                         "_type": "CLUSTER",
                         "name": {
                             "_type": "DV_TEXT",
-                            "value": "Medication"
+                            "value": "Medication details"
                         },
                         "items": [
-                            {
-                                "_type": "ELEMENT",
-                                "name": {
-                                    "_type": "DV_TEXT",
-                                    "value": "Expiry"
-                                },
-                                "value": {
-                                    "_type": "DV_DATE_TIME",
-                                    "value": "2021-11-18T11:07:17.095Z"
-                                },
-                                "archetype_node_id": "at0003"
-                            },
                             {
                                 "_type": "ELEMENT",
                                 "name": {
@@ -401,29 +422,7 @@
                                 "archetype_node_id": "at0151"
                             }
                         ],
-                        "archetype_node_id": "openEHR-EHR-CLUSTER.medication.v1"
-                    },
-                    {
-                        "_type": "CLUSTER",
-                        "name": {
-                            "_type": "DV_TEXT",
-                            "value": "Medication supply amount"
-                        },
-                        "items": [
-                            {
-                                "_type": "ELEMENT",
-                                "name": {
-                                    "_type": "DV_TEXT",
-                                    "value": "Amount description"
-                                },
-                                "value": {
-                                    "_type": "DV_TEXT",
-                                    "value": "30ml"
-                                },
-                                "archetype_node_id": "at0161"
-                            }
-                        ],
-                        "archetype_node_id": "openEHR-EHR-CLUSTER.medication_supply_amount.v0"
+                        "archetype_node_id": "openEHR-EHR-CLUSTER.medication.v2"
                     },
                     {
                         "_type": "CLUSTER",
